@@ -1,0 +1,48 @@
+/*
+ * Copyright (c) 2006-2021, RT-Thread Development Team
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * Change Logs:
+ * Date           Author       Notes
+ */
+#include "hal_uart.h"
+#include "zf_uart.h"
+#include "reg_common.h"
+#include <rthw.h>
+#include <rtconfig.h>
+uint8 uart3_get_buffer;
+bool uart3_interrupt_flag = false;													// 这个变量在 isr.c 的 UART2_IRQHandler 中置位
+uint8 ch = -1;
+
+#ifndef RT_USING_FINSH
+//#error Please uncomment the line <#include "finsh_config.h"> in the rtconfig.h
+#endif
+
+#ifdef RT_USING_FINSH
+
+RT_WEAK uint8 rt_hw_console_getchar(void)
+{  
+	ch=-1;
+    uart_rx_irq(UART_3, ENABLE);													// 使能 UART2 的接收中断
+    if(uart3_interrupt_flag)													// UART2 触发了接收中断
+    {
+        ch=uart3_get_buffer;
+        uart3_interrupt_flag = false;											// UART2 中断标志复位
+        if(ch!=0&&ch!=255)
+            uart_rx_irq(UART_3, DISABLE);													// 使能 UART2 的接收中断
+    }
+    uart_rx_irq(UART_3, DISABLE);													// 使能 UART2 的接收中断
+if(ch==0||ch==255)
+        return 0;
+else return ch;
+
+   
+}
+void uart_interrupt_handler (void)													// 这个函数在 isr.c 的 UART2_IRQHandler 中调用
+{
+    uart3_interrupt_flag = true;													// UART2 中断标志置位
+    uart_getchar(UART_3, &uart3_get_buffer);										// 读取数据
+}
+#endif /* RT_USING_FINSH */
+
