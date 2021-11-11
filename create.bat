@@ -3,6 +3,6 @@ git init
 git add *
 git commit -m "first commit"
 git branch -M main
-git remote add origin https://github.com/wu58430/smart_car.git
-git push https://github.com/wu58430/smartcar
+git remote add origin https://github.com/wu58430/big_create.git
+git push https://github.com/wu58430/big_create
 pause
