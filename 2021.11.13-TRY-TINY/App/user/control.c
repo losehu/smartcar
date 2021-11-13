@@ -12,7 +12,7 @@ int  angle_out = 0, v_out = 0;
 float  angle_v_out = 0;
 int Speed_diff_l = 0;//×ó²îËÙ
 int Speed_diff_r = 0;//ÓÒ²îËÙ
-int speed_set=600;
+int speed_set=1000;
 CarInfoTypedef   CarInfo;
 PID Angle_PID, Ang_Vel_PID, Vel_PID, Turn_PID, Direct_PID;
 

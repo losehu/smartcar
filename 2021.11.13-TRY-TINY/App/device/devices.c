@@ -251,11 +251,11 @@ void Encoder_Read(void)
     //选择速度
     if (ICM_Treated.gyro.z < -50) //右转用左
     {
-        Wheel.now = L_Wheel.out - ICM_Treated.gyro.z * 0.01;
+        Wheel.now = L_Wheel.out - ICM_Treated.gyro.z * 0.02;
     }
     else if (ICM_Treated.gyro.z > 50) //左转取右
     {
-        Wheel.now = R_Wheel.out + ICM_Treated.gyro.z * 0.01;
+        Wheel.now = R_Wheel.out + ICM_Treated.gyro.z * 0.02;
     }
     else
     {
