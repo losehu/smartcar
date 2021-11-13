@@ -326,9 +326,7 @@ uint8 Center_Cal(void)
         {
             excursion[Ysite] = (float)(Img.Center_Repair[Ysite] - 64) / (float)(RoadWide0[Ysite] / 2) * 100;
         }
-        excursion[15] = 0.000f;
-        excursion[16] = 0.000f;
-        excursion[17] = 0.000f;
+  
         for (Ysite = start_line; Ysite < end_line ; Ysite ++)
         {
             sumcenter += excursion[Ysite];
