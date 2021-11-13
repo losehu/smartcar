@@ -249,19 +249,20 @@ void Encoder_Read(void)
     Wheel.LSpeed =  L_Wheel.out/* - ICM_Treated.gyro.z * 0.17*/;
     Wheel.RSpeed =  R_Wheel.out/* + ICM_Treated.gyro.z * 0.17*/;
     //选择速度
-    if (ICM_Treated.gyro.z < -50) //右转用左
-    {
-        Wheel.now = L_Wheel.out - ICM_Treated.gyro.z * 0.045;
-    }
-    else if (ICM_Treated.gyro.z > 50) //左转取右
-    {
-        Wheel.now = R_Wheel.out + ICM_Treated.gyro.z * 0.045;
-    }
-    else
-    {
-        Wheel.now = (L_Wheel.out + R_Wheel.out) / 2;
-    }
+//    if (ICM_Treated.gyro.z < -50) //右转用左
+//    {
+//        Wheel.now = L_Wheel.out - ICM_Treated.gyro.z * 0.045;
+//    }
+//    else if (ICM_Treated.gyro.z > 50) //左转取右
+//    {
+//        Wheel.now = R_Wheel.out + ICM_Treated.gyro.z * 0.045;
+//    }
+//    else
+//    {
+//        Wheel.now = (L_Wheel.out + R_Wheel.out) / 2;
+//    }
     //滤波
+        Wheel.now = (L_Wheel.out + R_Wheel.out) / 2;
 
     Wheel.now = Wheel.now * 0.9 + Wheel.last * 0.1;
     Wheel.last = Wheel.now;
