@@ -180,16 +180,16 @@ void Get_Bin_Image(unsigned char mode)
     #endif
     */
     /* 二值化 */
-    for (i = 0; i < 60; i++)
-    {
-        for (j = 0; j < 128; j++)
-        {
-            if (CRM[i][j] > Threshold1) //数值越大，显示的内容越多，较浅的图像也能显示出来
-                Bin_Image[i][j] = 255;
-            else
-                Bin_Image[i][j] = 0;
-        }
-    }
+//    for (i = 0; i < 60; i++)
+//    {
+//        for (j = 0; j < 128; j++)
+//        {
+//            if (CRM[i][j] > Threshold1) //数值越大，显示的内容越多，较浅的图像也能显示出来
+//                Bin_Image[i][j] = 255;
+//            else
+//                Bin_Image[i][j] = 0;
+//        }
+//    }
 }
 /*************************************************************************
  *  函数名称：short GetOSTU (unsigned char tmImage[LCDH][LCDW])

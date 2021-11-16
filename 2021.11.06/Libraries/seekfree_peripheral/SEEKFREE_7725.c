@@ -666,11 +666,19 @@ void ImageUnzip(uint8 *zipsrc, uint8 *unzipsrc)
     }
 }
 
-
+//uint32 use_time;
 //双缓冲解压
 void  CameraExtract0(void)
 {
-    CRM123();//摄像头CAME->缓冲CRM
+	   // systick_start();
+
+  // CRM123();//摄像头CAME->缓冲CRM
+	// use_time = systick_getval_us();
+//		    systick_start();
+
+	memcpy(CRM,mt9v03x_image,60*128);
+//		 use_time = systick_getval_us();
+
     Get_Bin_Image(0);//二值化处理CRM->Bin_Image
 }
 

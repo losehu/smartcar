@@ -62,7 +62,6 @@ uint8 Global_Init(void)
     //device
     BeepInt();
 
-    systick_start();
     ips114_init();
     ips114_showstr(0, 0, "ips114_init :");
     ips114_showstr(200, 0, "OK");
@@ -124,7 +123,7 @@ uint8 Global_Init(void)
     //  while(gpio_get(PAGE_UP_PIN));
     ips114_clear(BLACK);
     //开始调度
-    tim_interrupt_init_us(TIM_6, 1000, 0x02, 0x03);
+  //  tim_interrupt_init_us(TIM_6, 1000, 0x02, 0x03);
 
     return 1;
 }

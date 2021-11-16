@@ -314,7 +314,6 @@ uint8 GetBorder(void)
     //初始化扫线标志var
     StartColSum = 0;
     StartColIndex = 0;
-
     //-------------------Line---------------------//
     LineStatusClear(&LineALL);
     LineStatusClear(&Line5_35);
@@ -404,51 +403,51 @@ uint8 GetBorder(void)
         if (InRange(Ysite, 3, 57))
         {
             //10
-            if (Bin_Image[59 - Ysite     ][10] == 0 && \
-                    Bin_Image[59 - Ysite - 1][10] == 0 && \
-                    Bin_Image[59 - Ysite - 2][10] == 0 && \
+            if (CRM[59 - Ysite     ][10] <=Threshold1 && \
+                    CRM[59 - Ysite - 1][10] <=Threshold1 && \
+                    CRM[59 - Ysite - 2][10] <=Threshold1 && \
                     Column10.firstblackYFlag == 'F')
             {
                 Column10.firstblackY = Ysite;
                 Column10.firstblackYFlag = 'T';
             }
-            if (Bin_Image[59 - Ysite     ][10] == 255 && \
-                    Bin_Image[59 - Ysite - 1][10] == 255 && \
-                    Bin_Image[59 - Ysite - 2][10] == 255 && \
+            if (CRM[59 - Ysite     ][10] >Threshold1 && \
+                    CRM[59 - Ysite - 1][10] >Threshold1 && \
+                    CRM[59 - Ysite - 2][10] >Threshold1 && \
                     Column10.firstwhiteYFlag == 'F')
             {
                 Column10.firstwhiteY = Ysite;
                 Column10.firstwhiteYFlag = 'T';
             }
             //117
-            if (Bin_Image[59 - Ysite     ][117] == 0 && \
-                    Bin_Image[59 - Ysite - 1][117] == 0 && \
-                    Bin_Image[59 - Ysite - 2][117] == 0 && \
+            if (CRM[59 - Ysite     ][117] <=Threshold1 && \
+                    CRM[59 - Ysite - 1][117] <=Threshold1 && \
+                    CRM[59 - Ysite - 2][117] <=Threshold1 && \
                     Column117.firstblackYFlag == 'F')
             {
                 Column117.firstblackY = Ysite;
                 Column117.firstblackYFlag = 'T';
             }
-            if (Bin_Image[59 - Ysite     ][117] == 255 && \
-                    Bin_Image[59 - Ysite - 1][117] == 255 && \
-                    Bin_Image[59 - Ysite - 2][117] == 255 && \
+            if (CRM[59 - Ysite     ][117] >Threshold1 && \
+                    CRM[59 - Ysite - 1][117] >Threshold1 && \
+                    CRM[59 - Ysite - 2][117] >Threshold1 && \
                     Column117.firstwhiteYFlag == 'F')
             {
                 Column117.firstwhiteY = Ysite;
                 Column117.firstwhiteYFlag = 'T';
             }
             //64
-            if (Bin_Image[59 - Ysite     ][64] == 0 && \
-                    Bin_Image[59 - Ysite - 1][64] == 0 && \
-                    Bin_Image[59 - Ysite - 2][64] == 0 && \
+            if (CRM[59 - Ysite     ][64] <=Threshold1 && \
+                    CRM[59 - Ysite - 1][64] <=Threshold1 && \
+                    CRM[59 - Ysite - 2][64] <=Threshold1 && \
                     Column64.firstblackYFlag == 'F')
             {
                 Column64.firstblackY = Ysite;
                 Column64.firstblackYFlag = 'T';
             }
-            if (Bin_Image[59 - Ysite     ][64] == 255 && \
-                    Bin_Image[59 - Ysite - 1][64] == 255 && \
-                    Bin_Image[59 - Ysite - 2][64] == 255 && \
+            if (CRM[59 - Ysite     ][64] >Threshold1 && \
+                    CRM[59 - Ysite - 1][64] >Threshold1 && \
+                    CRM[59 - Ysite - 2][64] >Threshold1 && \
                     Column64.firstwhiteYFlag == 'F')
             {
                 Column64.firstwhiteY = Ysite;
@@ -458,45 +457,45 @@ uint8 GetBorder(void)
         if (InRange(Ysite, 23, 57))
         {
             //10
-            if (Bin_Image[59 - Ysite     ][10] == 0 && \
-                    Bin_Image[59 - Ysite - 1][10] == 0 && \
+            if (CRM[59 - Ysite     ][10] <=Threshold1 && \
+                    CRM[59 - Ysite - 1][10] <=Threshold1 && \
                     Column10.firstblackY20upFlag == 'F')
             {
                 Column10.firstblackY20up = Ysite;
                 Column10.firstblackY20upFlag = 'T';
             }
-            if (Bin_Image[59 - Ysite     ][10] == 255 && \
-                    Bin_Image[59 - Ysite - 1][10] == 255 && \
+            if (CRM[59 - Ysite     ][10] >Threshold1 && \
+                    CRM[59 - Ysite - 1][10]>Threshold1 && \
                     Column10.firstwhiteY20upFlag == 'F')
             {
                 Column10.firstwhiteY20up = Ysite;
                 Column10.firstwhiteY20upFlag = 'T';
             }
             //117
-            if (Bin_Image[59 - Ysite     ][117] == 0 && \
-                    Bin_Image[59 - Ysite - 1][117] == 0 && \
+            if (CRM[59 - Ysite     ][117] <=Threshold1 && \
+                    CRM[59 - Ysite - 1][117] <=Threshold1 && \
                     Column117.firstblackY20upFlag == 'F')
             {
                 Column117.firstblackY20up = Ysite;
                 Column117.firstblackY20upFlag = 'T';
             }
-            if (Bin_Image[59 - Ysite     ][117] == 255 && \
-                    Bin_Image[59 - Ysite - 1][117] == 255 && \
+            if (CRM[59 - Ysite     ][117] >Threshold1 && \
+                    CRM[59 - Ysite - 1][117] >Threshold1 && \
                     Column117.firstwhiteY20upFlag == 'F')
             {
                 Column117.firstwhiteY20up = Ysite;
                 Column117.firstwhiteY20upFlag = 'T';
             }
             //64
-            if (Bin_Image[59 - Ysite     ][64] == 0 && \
-                    Bin_Image[59 - Ysite - 1][64] == 0 && \
+            if (CRM[59 - Ysite     ][64] <=Threshold1 && \
+                    CRM[59 - Ysite - 1][64]<=Threshold1 && \
                     Column64.firstblackY20upFlag == 'F')
             {
                 Column64.firstblackY20up = Ysite;
                 Column64.firstblackY20upFlag = 'T';
             }
-            if (Bin_Image[59 - Ysite     ][64] == 255 && \
-                    Bin_Image[59 - Ysite - 1][64] == 255 && \
+            if (CRM[59 - Ysite     ][64] >Threshold1 && \
+                    CRM[59 - Ysite - 1][64] >Threshold1 && \
                     Column64.firstwhiteY20upFlag == 'F')
             {
                 Column64.firstwhiteY20up = Ysite;
@@ -506,17 +505,17 @@ uint8 GetBorder(void)
         if (Ysite < 30)
         {
             //10
-            if (Bin_Image[59 - Ysite][10] == 0)
+            if (CRM[59 - Ysite][10] <=Threshold1)
                 Column10.Line0_30_Black ++;
             else
                 Column10.Line0_30_White ++;
             //107
-            if (Bin_Image[59 - Ysite][117] == 0)
+            if (CRM[59 - Ysite][117] <=Threshold1)
                 Column117.Line0_30_Black ++;
             else
                 Column117.Line0_30_White ++;
             //64
-            if (Bin_Image[59 - Ysite][64] == 0)
+            if (CRM[59 - Ysite][64] <=Threshold1)
                 Column64.Line0_30_Black ++;
             else
                 Column64.Line0_30_White ++;
@@ -524,17 +523,17 @@ uint8 GetBorder(void)
         if (Ysite >= 30)
         {
             //10
-            if (Bin_Image[59 - Ysite][10] == 0)
+            if (CRM[59 - Ysite][10] <=Threshold1)
                 Column10.Line30_60_Black ++;
             else
                 Column10.Line30_60_White ++;
             //107
-            if (Bin_Image[59 - Ysite][117] == 0)
+            if (CRM[59 - Ysite][117] <=Threshold1)
                 Column117.Line30_60_Black ++;
             else
                 Column117.Line30_60_White ++;
             //64
-            if (Bin_Image[59 - Ysite][64] == 0)
+            if (CRM[59 - Ysite][64] <=Threshold1)
                 Column64.Line30_60_Black ++;
             else
                 Column64.Line30_60_White ++;
@@ -544,12 +543,12 @@ uint8 GetBorder(void)
     //从左向右扫线黑白起始点
     for (Xsite = 0; Xsite < 127; Xsite ++)
     {
-        if (Bin_Image[59 - 56][Xsite] == 0 && Row56.LeftToRightFirstBlackFindFlag == 'F')
+        if (CRM[59 - 56][Xsite] <=Threshold1 && Row56.LeftToRightFirstBlackFindFlag == 'F')
         {
             Row56.LeftToRightFirstBlack = Xsite;
             Row56.LeftToRightFirstBlackFindFlag = 'T';
         }
-        if (Bin_Image[59 - 56][Xsite] == 255 && Row56.LeftToRightFirstWhiteFindFlag == 'F')
+        if (CRM[59 - 56][Xsite] >Threshold1 && Row56.LeftToRightFirstWhiteFindFlag == 'F')
         {
             Row56.LeftToRightFirstWhite = Xsite;
             Row56.LeftToRightFirstWhiteFindFlag = 'T';
@@ -559,12 +558,12 @@ uint8 GetBorder(void)
     }
     for (Xsite = 127; Xsite > 0; Xsite --)
     {
-        if (Bin_Image[59 - 56][Xsite] == 0 && Row56.RightToLeftFirstBlackFindFlag == 'F')
+        if (CRM[59 - 56][Xsite] <=Threshold1 && Row56.RightToLeftFirstBlackFindFlag == 'F')
         {
             Row56.RightToLeftFirstBlack = Xsite;
             Row56.RightToLeftFirstBlackFindFlag = 'T';
         }
-        if (Bin_Image[59 - 56][Xsite] == 255 && Row56.RightToLeftFirstWhiteFindFlag == 'F')
+        if (CRM[59 - 56][Xsite] >Threshold1&& Row56.RightToLeftFirstWhiteFindFlag == 'F')
         {
             Row56.RightToLeftFirstWhite = Xsite;
             Row56.RightToLeftFirstWhiteFindFlag = 'T';
@@ -576,7 +575,7 @@ uint8 GetBorder(void)
     Ysite = 5;
     for (Xsite = 0 ; Xsite < 127; Xsite ++)
     {
-        if (Bin_Image[59 - Ysite][Xsite] == 255)
+        if (CRM[59 - Ysite][Xsite] >Threshold1)
         {
             StartColSum += Xsite;
             StartColIndex ++;
@@ -592,7 +591,7 @@ uint8 GetBorder(void)
         //扫左线
         for (Xsite = Base.StartSearchColumn; Xsite >= 0; Xsite --)
         {
-            if (Bin_Image[59 - Ysite][Xsite] == 0 && Xsite != 0) //设置赛道左起始点
+            if (CRM[59 - Ysite][Xsite] <=Threshold1 && Xsite != 0) //设置赛道左起始点
             {
                 Img.LeftBorder[Ysite] = Xsite + 1;
                 Img.LeftBorderFindFlag[Ysite] = 'T';
@@ -619,7 +618,7 @@ uint8 GetBorder(void)
         //扫右边线
         for (Xsite = Base.StartSearchColumn; Xsite <= 127; Xsite ++)
         {
-            if (Bin_Image[59 - Ysite][Xsite] == 0 && Xsite != (COL - 1)) //扫到黑线且不接近边缘
+            if (CRM[59 - Ysite][Xsite] <=Threshold1 && Xsite != (COL - 1)) //扫到黑线且不接近边缘
             {
                 Img.RightBorder[Ysite] = Xsite - 1;
                 Img.RightBorderFindFlag[Ysite] = 'T';
@@ -937,7 +936,7 @@ uint8 Fork_Find_Peak(void)
                 Fork.ForkLeftBorder[Ysite] = Xsite;
                 break;
             }
-            if (Bin_Image[59 - Ysite][Xsite] == 255)
+            if (CRM[59 - Ysite][Xsite] >Threshold1)
             {
                 Fork.ForkLeftBorder[Ysite] = Xsite - 1;
                 break;
@@ -950,7 +949,7 @@ uint8 Fork_Find_Peak(void)
                 Fork.ForkRightBorder[Ysite] = Xsite;
                 break;
             }
-            if (Bin_Image[59 - Ysite][Xsite] == 255)
+            if (CRM[59 - Ysite][Xsite]> Threshold1)
             {
                 Fork.ForkRightBorder[Ysite] = Xsite + 1;
                 break;
@@ -977,7 +976,7 @@ uint8 Ret_BlackCenterLine_Length(void)
     uint8 Cntx0 = 0;
     for (Ysite = 5; Ysite < 60; Ysite ++)
     {
-        if (Bin_Image[59 - Ysite][64] == 0)
+        if (CRM[59 - Ysite][64]<= Threshold1)
             Cntx0 ++;
         if (Cntx0 >= 10)
             break;
@@ -996,7 +995,7 @@ uint8 Fork_Avoid_Cross(void)
     {
         for (Ysite = 30; Ysite < 55; Ysite ++)
         {
-            if (Bin_Image[59 - Ysite][Xsite] == 0)
+            if (CRM[59 - Ysite][Xsite] <=Threshold1)
                 break;
         }
         if (Ysite >= 55)
@@ -1169,8 +1168,8 @@ uint8 Line_Ret_WhiteBlackChange_VaildN(void)
         Y0_ColorChange[Ysite] = 0;
         for (Xsite = (64 - RoadWide0[Ysite] / 2); Xsite < (Ysite + RoadWide0[Ysite] / 2); Xsite ++)
         {
-            if ((Bin_Image[59 - Ysite][Xsite] == 0 && Bin_Image[59 - Ysite][Xsite - 1] == 255) ||
-                    (Bin_Image[59 - Ysite][Xsite] == 0 && Bin_Image[59 - Ysite ][Xsite + 1] == 255))
+            if ((CRM[59 - Ysite][Xsite] <=Threshold1 && CRM[59 - Ysite][Xsite - 1] >Threshold1) ||
+                    (CRM[59 - Ysite][Xsite] <=Threshold1 && CRM[59 - Ysite ][Xsite + 1] >Threshold1))
                 Y0_ColorChange[Ysite] ++;
         }
         if (Y0_ColorChange[Ysite] >= 6)
@@ -1196,8 +1195,8 @@ uint8 Line_Ret_WhiteBlackChangeY(void)
         Y0_ColorChange[Ysite] = 0;
         for (Xsite = (64 - RoadWide0[Ysite] / 2); Xsite < (Ysite + RoadWide0[Ysite] / 2); Xsite ++)
         {
-            if ((Bin_Image[59 - Ysite][Xsite] == 0 && Bin_Image[59 - Ysite][Xsite - 1] == 255) ||
-                    (Bin_Image[59 - Ysite][Xsite] == 0 && Bin_Image[59 - Ysite ][Xsite + 1] == 255))
+            if ((CRM[59 - Ysite][Xsite] <=Threshold1 && CRM[59 - Ysite][Xsite - 1] >Threshold1) ||
+                    (CRM[59 - Ysite][Xsite] <=Threshold1 && CRM[59 - Ysite ][Xsite + 1] >Threshold1))
                 Y0_ColorChange[Ysite] ++;
         }
         if (Y0_ColorChange[Ysite] >= 6)
@@ -1222,7 +1221,7 @@ uint16 BarnTurnInOk(void)
     {
         for (Xsite = 20; Xsite < 107; Xsite ++)
         {
-            if (Bin_Image[59 - Ysite][Xsite] == BLACK)
+            if (CRM[59 - Ysite][Xsite] <=Threshold1)
                 ColorChange_cnt ++;
         }
     }
@@ -1456,14 +1455,14 @@ uint8 Circle_Find_LeftUp_Inflexion(void)
     {
         for (Xsite = 125; Xsite > 0; Xsite --)
         {
-            if (Bin_Image[59 - Ysite][Xsite] == 255 && \
-                    Bin_Image[59 - Ysite][Xsite - 1] == 255 && \
-                    Bin_Image[59 - Ysite][Xsite - 2] == 255)
+            if (CRM[59 - Ysite][Xsite] >Threshold1&& \
+                    CRM[59 - Ysite][Xsite - 1] >Threshold1 && \
+                    CRM[59 - Ysite][Xsite - 2] >Threshold1)
                 break;
         }
         for (; Xsite > 30; Xsite --)
         {
-            if (Bin_Image[59 - Ysite][Xsite] == 0)
+            if (CRM[59 - Ysite][Xsite] <=Threshold1)
             {
                 Circle.LeftUpInflexion.y = Ysite;
                 Circle.LeftUpInflexion.x = Xsite;
@@ -1523,14 +1522,14 @@ uint8 Circle_Find_RightUp_Inflexion(void)
     {
         for (Xsite = 2; Xsite < 127; Xsite ++)
         {
-            if (Bin_Image[59 - Ysite][Xsite] == 255 && \
-                    Bin_Image[59 - Ysite][Xsite + 1] == 255 && \
-                    Bin_Image[59 - Ysite][Xsite + 2] == 255)
+            if (CRM[59 - Ysite][Xsite] >Threshold1&& \
+                    CRM[59 - Ysite][Xsite + 1] >Threshold1 && \
+                    CRM[59 - Ysite][Xsite + 2] >Threshold1)
                 break;
         }
         for (; Xsite < 127; Xsite ++)
         {
-            if (Bin_Image[59 - Ysite][Xsite] == 0)
+            if (CRM[59 - Ysite][Xsite] <=Threshold1)
             {
                 Circle.RightUpInflexion.y = Ysite;
                 Circle.RightUpInflexion.x = Xsite;
